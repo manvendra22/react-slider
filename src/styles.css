@@ -13,9 +13,9 @@
 .slider {
     width: 100%;
     -webkit-appearance: none;
-    background-color: aquamarine;
-    height: 10px;
-    border-radius: 5px;
+    background-color: #acc2df;
+    height: 7px;
+    border-radius: 3px;
     outline: none;
 }
 
@@ -23,8 +23,16 @@
     -webkit-appearance: none;
     height: 15px;
     width: 15px;
-    background-color: blue;
+    background-color: #3066b0;
     border-radius: 50%;
     outline: none;
     cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 0 10px RGBA(48, 102, 176, 0.1);
+}
+
+.slider:active::-webkit-slider-thumb {
+    box-shadow: 0 0 0 20px RGBA(48, 102, 176, 0.1);
 }
