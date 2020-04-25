@@ -5,7 +5,7 @@ export default function Slider(props) {
 
     return (
         <div className="bubble" style={{ left: `${value}%`, display: visible ? '' : 'none' }}>
-            {value}
+            <span>{value}</span>
         </div>
     );
 }

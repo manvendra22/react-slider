@@ -6,7 +6,7 @@ import "./styles.css";
 
 export default function App() {
     let [value, setValue] = useState(0);
-    let [visible, setVisible] = useState(false);
+    let [visible, setVisible] = useState(true);
 
     function handleChange(e) {
         console.log(e.target.value);

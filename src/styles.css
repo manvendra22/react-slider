@@ -46,16 +46,16 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    height: 30px;
-    width: 30px;
-    bottom: 25px;
-    /* left: -5px; */
-    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    bottom: 30px;
     background-color: #eaf0f7;
     color: #83a3d0;
     font-size: 12px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
 }
 
-.hidden {
-    display: none;
+.bubble span {
+    transform: rotate(45deg);
 }
