@@ -6,7 +6,7 @@ import "./styles.css";
 
 export default function App() {
     let [value, setValue] = useState(0);
-    let [visible, setVisible] = useState(true);
+    let [visible, setVisible] = useState(false);
 
     function handleChange(e) {
         console.log(e.target.value);
@@ -20,7 +20,6 @@ export default function App() {
     function handleMouseDown() {
         setVisible(true);
     }
-
 
     return (
         <div className="App">
