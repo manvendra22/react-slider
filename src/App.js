@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Slider from "./Slider";
+import Bubble from "./Bubble";
 
 import "./styles.css";
 
@@ -14,6 +15,7 @@ export default function App() {
     return (
         <div className="App">
             <div className="slider-container">
+                <Bubble value={value} />
                 <Slider
                     min={0}
                     max={100}
