@@ -27,12 +27,15 @@
     border-radius: 50%;
     outline: none;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
 
 .slider::-webkit-slider-thumb:hover {
-    box-shadow: 0 0 0 10px RGBA(48, 102, 176, 0.1);
+    box-shadow: 0 0 0 8px RGBA(48, 102, 176, 0.1);
 }
 
 .slider:active::-webkit-slider-thumb {
-    box-shadow: 0 0 0 20px RGBA(48, 102, 176, 0.1);
+    box-shadow: 0 0 0 12px RGBA(48, 102, 176, 0.1);
+    height: 12px;
+    width: 12px;
 }
