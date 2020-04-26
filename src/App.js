@@ -1,5 +1,6 @@
 import React from "react";
-import FormSlider from './FormSlider';
+
+import FormSlider from './components/FormSlider/FormSlider';
 
 import "./styles.css";
 
@@ -12,14 +13,15 @@ export default function App() {
         <div className="App">
             <FormSlider
                 initialValue={50}
-                handleChange={handleChange}
+                onChange={handleChange}
                 min={0}
                 max={100}
                 step={1}
                 name=''
                 className=''
                 disabled={false}
-                showBubble={true} />
+                showBubble={true}
+            />
         </div>
     );
 }

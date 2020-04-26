@@ -1,0 +1,18 @@
+.bubble {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    bottom: 35px;
+    background-color: #eaf0f7;
+    color: #83a3d0;
+    font-size: 12px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+}
+
+.bubble span {
+    transform: rotate(45deg);
+}
