@@ -1,5 +1,7 @@
 import React, { Fragment, useState } from "react";
+
 import Input from "../Input/Input";
+import Label from "../Label/Label"
 
 import styles from './Slider.module.css'
 
@@ -26,8 +28,8 @@ export default function Slider(props) {
             />
             {showLables &&
                 <Fragment>
-                    <span className={`${styles.label} ${styles.min}`}>{min}</span>
-                    <span className={`${styles.label} ${styles.max}`}>{max}</span>
+                    <Label value={min} className={styles.min} />
+                    <Label value={max} className={styles.max} />
                 </Fragment>}
         </div>
     );

@@ -11,3 +11,5 @@ export default {
 export const Default = () => <Slider />;
 
 export const Disabled = () => <Slider disabled />;
+
+export const WithoutLabels = () => <Slider showLables={false} />;
