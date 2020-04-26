@@ -2,3 +2,11 @@
     position: relative;
     width: 50%;
 }
+
+.labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-left: 4px;
+    color: #83a3d0;
+}
