@@ -11,19 +11,21 @@ export default function App() {
 
     return (
         <div className="App">
-            <FormSlider
-                initialValue={50}
-                onChange={handleChange}
-                min={0}
-                max={100}
-                step={1}
-                name=''
-                className=''
-                disabled={false}
-                showLables={true}
-                showBubble={true}
-                showBubbleOnlyOnScroll={true}
-            />
+            <div className="box">
+                <FormSlider
+                    initialValue={50}
+                    onChange={handleChange}
+                    min={0}
+                    max={100}
+                    step={1}
+                    name=''
+                    className=''
+                    disabled={false}
+                    showLables={true}
+                    showBubble={true}
+                    showBubbleOnlyOnScroll={true}
+                />
+            </div>
         </div>
     );
 }
