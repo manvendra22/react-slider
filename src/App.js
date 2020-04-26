@@ -33,6 +33,8 @@ export default function App() {
                     onChange={handleChange}
                     onMouseUp={handleMouseUp}
                     onMouseDown={handleMouseDown}
+                    onTouchEnd={handleMouseUp}
+                    onTouchStart={handleMouseDown}
                 />
             </div>
         </div>
