@@ -20,8 +20,9 @@ export default function App() {
                 name=''
                 className=''
                 disabled={false}
+                showLables={true}
                 showBubble={true}
-                showLables={false}
+                showBubbleOnlyOnScroll={true}
             />
         </div>
     );

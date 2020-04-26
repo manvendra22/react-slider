@@ -5,9 +5,9 @@ import Bubble from "../Bubble/Bubble";
 import styles from './FormSlider.module.css'
 
 export default function FormSlider(props) {
-    const { initialValue, min, max, onChange, showBubble, showLables, ...otherProps } = props;
+    const { initialValue, min, max, onChange, showLables, showBubble, showBubbleOnlyOnScroll, ...otherProps } = props;
 
-    let [visible, setVisible] = useState(true);
+    let [visible, setVisible] = useState(!showBubbleOnlyOnScroll);
     let [value, setValue] = useState(initialValue);
 
     function handleChange(value) {
@@ -16,11 +16,11 @@ export default function FormSlider(props) {
     }
 
     function onMouseUp() {
-        setVisible(false);
+        showBubbleOnlyOnScroll && setVisible(false);
     }
 
     function onMouseDown() {
-        setVisible(true);
+        showBubbleOnlyOnScroll && setVisible(true);
     }
 
     const bubbleStyle = {
@@ -31,7 +31,9 @@ export default function FormSlider(props) {
 
     return (
         <div className={styles['slider-container']}>
-            {showBubble && visible && <Bubble value={value} style={bubbleStyle} />}
+            {showBubble
+                && visible
+                && <Bubble value={value} style={bubbleStyle} />}
             <Slider
                 {...otherProps}
                 min={min}
@@ -42,10 +44,11 @@ export default function FormSlider(props) {
                 onTouchEnd={onMouseUp}
                 onTouchStart={onMouseDown}
             />
-            {showLables && <div className={styles.labels}>
-                <span>{min}</span>
-                <span>{max}</span>
-            </div>}
+            {showLables &&
+                <div className={styles.labels}>
+                    <span>{min}</span>
+                    <span>{max}</span>
+                </div>}
         </div>
     );
 }
