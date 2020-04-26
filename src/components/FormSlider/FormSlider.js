@@ -26,7 +26,7 @@ export default function FormSlider(props) {
     const bubbleStyle = {
         position: 'absolute',
         left: `calc(${value}% - 17px)`,
-        bottom: '50px'
+        bottom: showLables ? '50px' : '35px'
     }
 
     return (
@@ -46,6 +46,6 @@ export default function FormSlider(props) {
                 <span>{min}</span>
                 <span>{max}</span>
             </div>}
-        </div >
+        </div>
     );
 }

@@ -21,7 +21,7 @@ export default function App() {
                 className=''
                 disabled={false}
                 showBubble={true}
-                showLables={true}
+                showLables={false}
             />
         </div>
     );
