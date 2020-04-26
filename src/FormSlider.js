@@ -5,24 +5,23 @@ import Bubble from "./Bubble";
 import "./styles.css";
 
 export default function FormSlider(props) {
-    const { initialValue, showBubble, ...otherProps } = props
+    const { initialValue, handleChange, showBubble, ...otherProps } = props
 
     let [value, setValue] = useState(initialValue);
     let [visible, setVisible] = useState(false);
 
-    function handleChange(e) {
-        console.log(e.target.value);
+    function onChange(e) {
         setValue(e.target.value);
+        handleChange(e.target.value)
     }
 
-    function handleMouseUp() {
+    function onMouseUp() {
         setVisible(false);
     }
 
-    function handleMouseDown() {
+    function onMouseDown() {
         setVisible(true);
     }
-
 
     return (
         <div className="slider-container">
@@ -30,11 +29,11 @@ export default function FormSlider(props) {
             <Slider
                 {...otherProps}
                 value={value}
-                onChange={handleChange}
-                onMouseUp={handleMouseUp}
-                onMouseDown={handleMouseDown}
-                onTouchEnd={handleMouseUp}
-                onTouchStart={handleMouseDown}
+                onChange={onChange}
+                onMouseUp={onMouseUp}
+                onMouseDown={onMouseDown}
+                onTouchEnd={onMouseUp}
+                onTouchStart={onMouseDown}
             />
         </div>
     );
