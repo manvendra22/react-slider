@@ -24,7 +24,7 @@ export default function App() {
     return (
         <div className="App">
             <div className="slider-container">
-                <Bubble value={value} visible={visible} />
+                {visible && <Bubble value={value} />}
                 <Slider
                     min={0}
                     max={100}
