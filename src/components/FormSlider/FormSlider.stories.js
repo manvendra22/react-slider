@@ -5,6 +5,7 @@ import FormSlider from './FormSlider'
 export default {
     title: 'FormSlider',
     component: FormSlider,
+    decorators: [storyFn => <div style={{ width: '50%' }}>{storyFn()}</div>],
 };
 
 export const Default = () => <FormSlider />;
