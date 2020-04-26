@@ -52,3 +52,14 @@ export default function FormSlider(props) {
         </div>
     );
 }
+
+FormSlider.defaultProps = {
+    initialValue: 50,
+    min: 0,
+    max: 100,
+    step: 1,
+    disabled: false,
+    showLables: true,
+    showBubble: true,
+    showBubbleOnlyOnScroll: true
+}

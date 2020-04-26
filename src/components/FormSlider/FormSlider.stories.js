@@ -7,4 +7,12 @@ export default {
     component: FormSlider,
 };
 
-export const Simple = () => <FormSlider />;
+export const Default = () => <FormSlider />;
+
+export const Disabled = () => <FormSlider disabled />;
+
+export const WithoutLabels = () => <FormSlider showLables={false} />;
+
+export const WithoutBubble = () => <FormSlider showBubble={false} />;
+
+export const AlwaysShowBubble = () => <FormSlider showBubbleOnlyOnScroll={false} />;
