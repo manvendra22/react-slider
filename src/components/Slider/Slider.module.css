@@ -37,3 +37,24 @@
     background-color: #CCCCCC;
     cursor: not-allowed;
 }
+
+.slider-container {
+    position: relative;
+}
+
+.label {
+    position: absolute;
+    font-size: 12px;
+    margin-left: 4px;
+    color: #83a3d0;
+}
+
+.min {
+    position: absolute;
+    left: 0;
+}
+
+.max {
+    position: absolute;
+    right: 0;
+}
