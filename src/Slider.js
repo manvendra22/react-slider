@@ -1,5 +1,6 @@
 import React from "react";
 
 export default function Slider(props) {
-    return <input type="range" className="slider" {...props} />;
+    const { className, ...otherProps } = props;
+    return <input type="range" className={`slider ${className}`} {...otherProps} />;
 }

@@ -41,6 +41,17 @@
     width: 12px;
 }
 
+.slider:disabled {
+    background-color: #EEEEEE;
+    cursor: not-allowed;
+}
+
+.slider:disabled::-webkit-slider-thumb {
+    background-color: #CCCCCC;
+    cursor: not-allowed;
+}
+
+
 .bubble {
     display: flex;
     align-items: center;
