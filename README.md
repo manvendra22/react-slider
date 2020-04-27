@@ -3,16 +3,16 @@
 ## Live links
 
 #### App
-https://react-slider.now.sh/
+https://react-kit.now.sh/
 
 #### Storybook
-https://react-slider-story.netlify.app/
+https://react-kit-story.netlify.app/
 
 ## Installation
 You will need node and npm installed globally on your machine.
 
-    $ git clone https://github.com/manvendra22/react-slider.git
-    $ cd react-slider
+    $ git clone https://github.com/manvendra22/react-ui-kit.git
+    $ cd react-ui-kit
     $ npm install
 
 ## Available scripts
