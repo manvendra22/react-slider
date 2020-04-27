@@ -1,4 +1,4 @@
-# react-slider
+# react-ui-kit
 
 ## Live links
 
