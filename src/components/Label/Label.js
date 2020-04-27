@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import styles from './Label.module.css'
 
 export default function Label(props) {
-    const { value, className } = props;
+    const { value, className, ...otherProps } = props;
 
     return (
-        <span className={`${styles.label} ${className}`} >
+        <span className={`${styles.label} ${className}`} {...otherProps}>
             {value}
         </span>
     );
@@ -15,9 +15,11 @@ export default function Label(props) {
 
 Label.defaultProps = {
     value: 50,
+    disabled: false,
 }
 
 Label.propTypes = {
     value: PropTypes.number,
+    disabled: PropTypes.bool,
     className: PropTypes.string,
 }

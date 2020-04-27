@@ -4,6 +4,6 @@
     color: #83a3d0;
 }
 
-.label:disabled {
+.label[disabled] {
     color: #CCCCCC;
 }
