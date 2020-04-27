@@ -6,8 +6,8 @@ export default function Input(props) {
 }
 
 Input.propTypes = {
-    value: PropTypes.number,
-    onChange: PropTypes.func,
+    value: PropTypes.number.isRequired,
+    onChange: PropTypes.func.isRequired,
     min: PropTypes.number,
     max: PropTypes.number,
     step: PropTypes.number,
