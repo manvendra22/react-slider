@@ -1,11 +1,40 @@
-.App {
+body {
+    box-sizing: border-box;
     font-family: sans-serif;
-    height: 100vh;
+    font-size: 16px;
+    color: #9980FA;
+    background: #F8F9FA;
+}
+
+.container {}
+
+.header {
+    background: #EEEAF9;
+    font-size: 24px;
+    padding: 20px;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
 .box {
     width: 50%;
+    margin: 100px auto;
+    padding: 50px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(247, 247, 247);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 5px 10px;
+    transition: box-shadow 0.3s ease 0s;
+}
+
+.box:hover {
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 30px 60px;
+}
+
+.title {
+    margin-bottom: 70px;
+}
+
+.content {
+    margin: 20px 0px;
 }

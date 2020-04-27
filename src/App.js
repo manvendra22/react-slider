@@ -10,21 +10,25 @@ export default function App() {
     }
 
     return (
-        <div className="App">
+        <div className="container">
+            <div className="header">React UI components</div>
             <div className="box">
-                <FormSlider
-                    initialValue={50}
-                    onChange={handleChange}
-                    min={0}
-                    max={100}
-                    step={1}
-                    name=''
-                    className=''
-                    disabled={false}
-                    showLables={true}
-                    showBubble={true}
-                    showBubbleOnlyOnScroll={true}
-                />
+                <div className="title">React-Slider</div>
+                <div className="content">
+                    <FormSlider
+                        initialValue={50}
+                        onChange={handleChange}
+                        min={0}
+                        max={100}
+                        step={1}
+                        name=''
+                        className=''
+                        disabled={false}
+                        showLables={true}
+                        showBubble={true}
+                        showBubbleOnlyOnScroll={false}
+                    />
+                </div>
             </div>
         </div>
     );
