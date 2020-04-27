@@ -26,7 +26,7 @@ export default function App() {
                         disabled={false}
                         showLables={true}
                         showBubble={true}
-                        showBubbleOnlyOnScroll={false}
+                        showBubbleOnlyOnScroll={true}
                     />
                 </div>
             </div>
