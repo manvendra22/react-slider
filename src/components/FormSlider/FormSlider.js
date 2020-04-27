@@ -7,7 +7,7 @@ import Bubble from "../Bubble/Bubble";
 import styles from './FormSlider.module.css'
 
 export default function FormSlider(props) {
-    const { initialValue, onChange, showBubble, showBubbleOnlyOnScroll, ...otherProps } = props;
+    const { initialValue, onChange, min, max, showBubble, showBubbleOnlyOnScroll, ...otherProps } = props;
 
     let [visible, setVisible] = useState(!showBubbleOnlyOnScroll);
     let [value, setValue] = useState(initialValue);
@@ -27,9 +27,11 @@ export default function FormSlider(props) {
 
     const bubbleStyle = {
         position: 'absolute',
-        left: `calc(${value}% - 17px)`,
+        left: `calc(${(100 / (max - min)) * (value - min)}% - 17px)`,
         bottom: '35px'
     }
+
+    console.log(bubbleStyle)
 
     return (
         <div className={styles['form-slider']}>
@@ -38,6 +40,8 @@ export default function FormSlider(props) {
                 && <Bubble value={value} style={bubbleStyle} />}
             <Slider
                 {...otherProps}
+                min={min}
+                max={max}
                 initialValue={initialValue}
                 handleChange={handleChange}
                 onMouseUp={onMouseUp}
@@ -50,14 +54,18 @@ export default function FormSlider(props) {
 }
 
 FormSlider.defaultProps = {
+    min: 0,
+    max: 100,
     initialValue: 50,
     showBubble: true,
     showBubbleOnlyOnScroll: true
 }
 
 FormSlider.propTypes = {
-    initialValue: PropTypes.number,
+    min: PropTypes.number,
+    max: PropTypes.number,
     onChange: PropTypes.func,
+    initialValue: PropTypes.number,
     showBubble: PropTypes.bool,
     showBubbleOnlyOnScroll: PropTypes.bool,
 }

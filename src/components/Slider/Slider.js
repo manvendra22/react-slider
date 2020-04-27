@@ -12,8 +12,8 @@ export default function Slider(props) {
     let [value, setValue] = useState(initialValue);
 
     function onChange(e) {
-        setValue(e.target.value);
-        handleChange(e.target.value);
+        setValue(+e.target.value);
+        handleChange(+e.target.value);
     }
 
     return (
@@ -39,19 +39,19 @@ export default function Slider(props) {
 
 
 Slider.defaultProps = {
-    initialValue: 50,
+    step: 1,
     min: 0,
     max: 100,
-    step: 1,
+    initialValue: 50,
     disabled: false,
     showLables: true,
 }
 
 Slider.propTypes = {
-    initialValue: PropTypes.number,
-    handleChange: PropTypes.func,
     min: PropTypes.number,
     max: PropTypes.number,
+    handleChange: PropTypes.func,
+    initialValue: PropTypes.number,
     step: PropTypes.number,
     disabled: PropTypes.bool,
     showLables: PropTypes.bool,

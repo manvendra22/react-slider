@@ -20,7 +20,7 @@ export default function App() {
                     step={1}
                     name=''
                     className=''
-                    disabled={true}
+                    disabled={false}
                     showLables={true}
                     showBubble={true}
                     showBubbleOnlyOnScroll={true}
