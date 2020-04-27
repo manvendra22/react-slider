@@ -7,4 +7,4 @@ export default {
     component: Lable,
 };
 
-export const Default = () => <Lable value="50" />;
+export const Default = () => <Lable />;

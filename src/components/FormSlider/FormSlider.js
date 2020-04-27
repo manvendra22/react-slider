@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from 'prop-types';
 
 import Slider from "../Slider/Slider";
 import Bubble from "../Bubble/Bubble";
@@ -52,4 +53,11 @@ FormSlider.defaultProps = {
     initialValue: 50,
     showBubble: true,
     showBubbleOnlyOnScroll: true
+}
+
+FormSlider.propTypes = {
+    initialValue: PropTypes.number,
+    onChange: PropTypes.func,
+    showBubble: PropTypes.bool,
+    showBubbleOnlyOnScroll: PropTypes.bool,
 }

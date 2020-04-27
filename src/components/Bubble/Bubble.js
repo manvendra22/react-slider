@@ -1,8 +1,9 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 import styles from './Bubble.module.css'
 
-export default function Slider(props) {
+export default function Bubble(props) {
     const { value, ...otherProps } = props;
 
     return (
@@ -10,4 +11,12 @@ export default function Slider(props) {
             <span>{value}</span>
         </div>
     );
+}
+
+Bubble.defaultProps = {
+    value: 50,
+}
+
+Bubble.propTypes = {
+    value: PropTypes.number,
 }

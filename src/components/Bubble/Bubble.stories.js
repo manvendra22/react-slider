@@ -7,4 +7,4 @@ export default {
     component: Bubble,
 };
 
-export const Default = () => <Bubble value="50" />;
+export const Default = () => <Bubble />;

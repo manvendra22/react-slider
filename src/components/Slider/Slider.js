@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from "react";
+import PropTypes from 'prop-types';
 
 import Input from "../Input/Input";
 import Label from "../Label/Label"
@@ -6,7 +7,7 @@ import Label from "../Label/Label"
 import styles from './Slider.module.css'
 
 export default function Slider(props) {
-    const { initialValue, handleChange, className, min, max, showLables, ...otherProps } = props;
+    const { initialValue, handleChange, className, min, max, showLables, disabled, ...otherProps } = props;
 
     let [value, setValue] = useState(initialValue);
 
@@ -24,12 +25,13 @@ export default function Slider(props) {
                 type="range"
                 value={value}
                 onChange={onChange}
+                disabled={disabled}
                 className={`${styles.slider} ${className}`}
             />
             {showLables &&
                 <Fragment>
-                    <Label value={min} className={styles.min} />
-                    <Label value={max} className={styles.max} />
+                    <Label value={min} className={styles.min} disabled={disabled} />
+                    <Label value={max} className={styles.max} disabled={disabled} />
                 </Fragment>}
         </div>
     );
@@ -45,3 +47,12 @@ Slider.defaultProps = {
     showLables: true,
 }
 
+Slider.propTypes = {
+    initialValue: PropTypes.number,
+    handleChange: PropTypes.func,
+    min: PropTypes.number,
+    max: PropTypes.number,
+    step: PropTypes.number,
+    disabled: PropTypes.bool,
+    showLables: PropTypes.bool,
+}
