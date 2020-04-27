@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
 
-import styles from './Bubble.module.css'
+import styles from './Bubble.module.scss'
 
 export default function Bubble(props) {
     const { value, ...otherProps } = props;

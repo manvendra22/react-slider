@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Slider from "../Slider/Slider";
 import Bubble from "../Bubble/Bubble";
 
-import styles from './FormSlider.module.css'
+import styles from './FormSlider.module.scss'
 
 export default function FormSlider(props) {
     const { initialValue, onChange, min, max, showBubble, showBubbleOnlyOnScroll, ...otherProps } = props;
@@ -30,8 +30,6 @@ export default function FormSlider(props) {
         left: `calc(${(100 / (max - min)) * (value - min)}% - 17px)`,
         bottom: '35px'
     }
-
-    console.log(bubbleStyle)
 
     return (
         <div className={styles['form-slider']}>

@@ -1,9 +1,0 @@
-.label {
-    font-size: 12px;
-    margin-left: 4px;
-    color: #83a3d0;
-}
-
-.label[disabled] {
-    color: #CCCCCC;
-}

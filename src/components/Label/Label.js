@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
 
-import styles from './Label.module.css'
+import styles from './Label.module.scss'
 
 export default function Label(props) {
     const { value, className, ...otherProps } = props;

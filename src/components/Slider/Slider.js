@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Input from "../Input/Input";
 import Label from "../Label/Label"
 
-import styles from './Slider.module.css'
+import styles from './Slider.module.scss'
 
 export default function Slider(props) {
     const { initialValue, handleChange, className, min, max, showLables, disabled, ...otherProps } = props;

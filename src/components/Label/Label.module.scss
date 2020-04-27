@@ -1,0 +1,11 @@
+@import "../../variables.scss";
+
+.label {
+    font-size: 12px;
+    margin-left: 4px;
+    color: $green-700;
+}
+
+.label[disabled] {
+    color: $disable-color;
+}

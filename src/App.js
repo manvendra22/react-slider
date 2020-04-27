@@ -2,7 +2,7 @@ import React from "react";
 
 import FormSlider from './components/FormSlider/FormSlider';
 
-import "./styles.css";
+import "./root.scss";
 
 export default function App() {
     function handleChange(value) {

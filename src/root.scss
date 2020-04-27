@@ -1,15 +1,17 @@
+@import "./variables.scss";
+
 body {
     box-sizing: border-box;
     font-family: sans-serif;
     font-size: 16px;
-    background: #F8F9FA;
+    background: $primary-background;
 }
 
 .container {}
 
 .header {
-    background: #EEEAF9;
-    color: #9980FA;
+    color: $orange-500;
+    background: $orange-100;
     font-size: 20px;
     padding: 20px;
     display: flex;
@@ -18,10 +20,10 @@ body {
 
 .box {
     width: 50%;
-    margin: 100px auto;
     padding: 50px;
-    color: #3066b0;
-    background: rgb(255, 255, 255);
+    margin: 100px auto;
+    color: $orange-600;
+    background: $white;
     border: 1px solid rgb(247, 247, 247);
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 5px 10px;
