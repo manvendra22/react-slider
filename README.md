@@ -2,10 +2,10 @@
 
 ## Live links
 
-### App
+#### App
 https://react-slider.now.sh/
 
-### Storybook
+#### Storybook
 https://react-slider-story.netlify.app/
 
 ## Installation
@@ -33,3 +33,7 @@ Open http://localhost:6006 to view it in the browser.
 ### `npm run build`
 
 Builds the app for production to the `dist` folder.
+
+### `npm run build-storybook`
+
+Builds the app for production to the `storybook-static` folder.
