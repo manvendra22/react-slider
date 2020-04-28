@@ -1,20 +1,22 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import PropTypes from 'prop-types';
 
 import Slider from "../Slider/Slider";
 import Bubble from "../Bubble/Bubble";
+import Label from "../Label/Label"
+
 
 import styles from './FormSlider.module.scss'
 
 export default function FormSlider(props) {
-    const { initialValue, onChange, min, max, showBubble, showBubbleOnlyOnScroll, ...otherProps } = props;
+    const { initialValue, onChange, min, max, showBubble, showLables, showBubbleOnlyOnScroll, disabled, ...otherProps } = props;
 
     let [visible, setVisible] = useState(!showBubbleOnlyOnScroll);
     let [value, setValue] = useState(initialValue);
 
-    function handleChange(value) {
-        setValue(value);
-        onChange(value);
+    function handleChange(e) {
+        setValue(+e.target.value);
+        onChange(+e.target.value);
     }
 
     function onMouseUp() {
@@ -27,8 +29,8 @@ export default function FormSlider(props) {
 
     const bubbleStyle = {
         position: 'absolute',
-        left: `calc(${(100 / (max - min)) * (value - min)}% - 17px)`,
-        bottom: '35px'
+        left: `calc(${(100 / (max - min)) * (value - min)}% - 16px)`,
+        bottom: '25px'
     }
 
     return (
@@ -40,13 +42,19 @@ export default function FormSlider(props) {
                 {...otherProps}
                 min={min}
                 max={max}
-                initialValue={initialValue}
-                handleChange={handleChange}
+                value={value}
+                onChange={handleChange}
                 onMouseUp={onMouseUp}
                 onMouseDown={onMouseDown}
                 onTouchEnd={onMouseUp}
                 onTouchStart={onMouseDown}
+                disabled={disabled}
             />
+            {showLables &&
+                <Fragment>
+                    <Label value={min} className={styles.min} disabled={disabled} />
+                    <Label value={max} className={styles.max} disabled={disabled} />
+                </Fragment>}
         </div>
     );
 }
@@ -56,7 +64,9 @@ FormSlider.defaultProps = {
     max: 100,
     initialValue: 50,
     showBubble: true,
-    showBubbleOnlyOnScroll: true
+    showLables: true,
+    showBubbleOnlyOnScroll: true,
+    disabled: false
 }
 
 FormSlider.propTypes = {
@@ -65,5 +75,7 @@ FormSlider.propTypes = {
     onChange: PropTypes.func,
     initialValue: PropTypes.number,
     showBubble: PropTypes.bool,
+    showLables: PropTypes.bool,
     showBubbleOnlyOnScroll: PropTypes.bool,
+    disabled: PropTypes.bool,
 }

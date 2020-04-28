@@ -1,3 +1,13 @@
 .form-slider {
     position: relative;
 }
+
+.min {
+    position: absolute;
+    left: 0;
+}
+
+.max {
+    position: absolute;
+    right: 0;
+}

@@ -1,58 +1,36 @@
-import React, { Fragment, useState } from "react";
+import React from "react";
 import PropTypes from 'prop-types';
-
-import Input from "../Input/Input";
-import Label from "../Label/Label"
 
 import styles from './Slider.module.scss'
 
 export default function Slider(props) {
-    const { initialValue, handleChange, className, min, max, showLables, disabled, ...otherProps } = props;
-
-    let [value, setValue] = useState(initialValue);
-
-    function onChange(e) {
-        setValue(+e.target.value);
-        handleChange(+e.target.value);
-    }
+    const { className, ...otherProps } = props;
 
     return (
-        <div className={styles['slider-container']}>
-            <Input
-                {...otherProps}
-                min={min}
-                max={max}
-                type="range"
-                value={value}
-                onChange={onChange}
-                disabled={disabled}
-                className={`${styles.slider} ${className}`}
-            />
-            {showLables &&
-                <Fragment>
-                    <Label value={min} className={styles.min} disabled={disabled} />
-                    <Label value={max} className={styles.max} disabled={disabled} />
-                </Fragment>}
-        </div>
+        <input
+            {...otherProps}
+            type="range"
+            className={`${styles.slider} ${className}`}
+        />
     );
 }
 
 
 Slider.defaultProps = {
-    step: 1,
     min: 0,
     max: 100,
-    initialValue: 50,
+    value: 50,
+    step: 1,
+    name: '',
     disabled: false,
-    showLables: true,
 }
 
 Slider.propTypes = {
     min: PropTypes.number,
     max: PropTypes.number,
-    handleChange: PropTypes.func,
-    initialValue: PropTypes.number,
+    value: PropTypes.number,
+    onChange: PropTypes.func,
     step: PropTypes.number,
+    name: PropTypes.string,
     disabled: PropTypes.bool,
-    showLables: PropTypes.bool,
 }
