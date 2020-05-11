@@ -72,10 +72,10 @@ body {
     box-shadow: rgba(0, 0, 0, 0.12) 0px 30px 60px;
 }
 
-.title {
-    margin-bottom: 70px;
-}
+.title {}
 
 .content {
     margin: 20px 0px;
+    display: flex;
+    justify-content: center;
 }

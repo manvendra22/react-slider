@@ -1,8 +1,9 @@
 import React from "react";
 
 import FormSlider from './components/FormSlider/FormSlider';
+import YearRangePicker from './components/YearRangePicker/YearRangePicker'
 
-import "./root.scss";
+import "./styles/root.scss";
 
 export default function App() {
     function handleChange(value) {
@@ -28,6 +29,12 @@ export default function App() {
                         showBubble={true}
                         showBubbleOnlyOnScroll={true}
                     />
+                </div>
+            </div>
+            <div className="box">
+                <div className="title">React-Year-Range-Picker</div>
+                <div className="content">
+                    <YearRangePicker />
                 </div>
             </div>
         </div>
