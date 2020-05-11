@@ -15,7 +15,7 @@ export default function App() {
             <div className="header">
                 React UI components
                 <a target="_blank" href="https://github.com/manvendra22/react-ui-kit" class="git-link">
-                    <img src="../github.svg" alt="github-logo" class="icon-git" />
+                    <img src="../public/github.svg" alt="github-logo" class="icon-git" />
                 </a>
             </div>
             <div className="box">
