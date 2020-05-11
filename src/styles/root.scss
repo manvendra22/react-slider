@@ -51,7 +51,7 @@ body {
     color: $orange-500;
     background: $orange-100;
     font-size: 20px;
-    padding: 20px;
+    padding: 25px;
     display: flex;
     align-items: center;
 }
@@ -78,4 +78,18 @@ body {
     margin: 20px 0px;
     display: flex;
     justify-content: center;
+}
+
+.git-link {
+    position: absolute;
+    right: 25px;
+}
+
+.icon-git {
+    width: 60px;
+    transition: all .3s ease-in-out;
+}
+
+.icon-git:hover {
+    transform: rotate(360deg) scale(1.2);
 }
