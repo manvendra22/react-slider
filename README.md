@@ -5,7 +5,7 @@
 ## Live links
 
 #### App
-https://react-kit.now.sh/
+https://react-kit.netlify.app/
 
 #### Storybook
 https://react-kit-story.netlify.app/
