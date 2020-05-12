@@ -10,6 +10,8 @@ https://react-kit.now.sh/
 #### Storybook
 https://react-kit-story.netlify.app/
 
+![Screenshot](react_ui_kit.png)
+
 ### Tech stack:
 
 - React
