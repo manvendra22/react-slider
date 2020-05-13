@@ -41,7 +41,10 @@ export default function App() {
             <div className="box">
                 <div className="title">React-Year-Range-Picker</div>
                 <div className="content">
-                    <YearRangePicker />
+                    <YearRangePicker
+                        startValue={2020}
+                        endValue={2100}
+                    />
                 </div>
             </div>
         </div>

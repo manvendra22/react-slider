@@ -151,7 +151,7 @@ class YearRangerPicker extends Component {
                                 <FaChevronRight />
                             </div>
                         </div>
-                        <div>
+                        <div className="selected-range">
                             {selectedStartValue} - {selectedEndValue}
                         </div>
                         <div className="right-header">
@@ -173,7 +173,7 @@ class YearRangerPicker extends Component {
                         </div>
                     </div>
                     <div className="panel-body">
-                        <div className="left-body border-right">
+                        <div className="left-body">
                             {this.initializeArray(initialStartValue).map(year => (
                                 <div onClick={() => this.handleStartYear(year)}
                                     className={`year ${year === selectedStartValue && 'active'}`}

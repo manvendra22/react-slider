@@ -16,7 +16,7 @@
 
     .year-range-panel-wraper {
         position: absolute;
-        width: 375px;
+        width: 376px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
         background-color: white;
@@ -40,6 +40,11 @@
                 display: flex;
             }
 
+            .selected-range {
+                font-size: 14px;
+
+            }
+
             .range-arrow {
                 border-radius: 10px;
                 padding: 0 4px;
@@ -54,19 +59,19 @@
         .panel-body {
             display: flex;
             border-top: 1px solid #e2e4ec;
+            width: 100%;
 
             .left-body {
                 display: flex;
                 flex-wrap: wrap;
-            }
-
-            .border-right {
+                width: 50%;
                 border-right: 1px solid #e2e4ec;
             }
 
             .right-body {
                 display: flex;
                 flex-wrap: wrap;
+                width: 50%;
             }
 
             .year {
