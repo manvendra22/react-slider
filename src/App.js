@@ -42,8 +42,8 @@ export default function App() {
                 <div className="title">React-Year-Range-Picker</div>
                 <div className="content">
                     <YearRangePicker
-                        startValue={2020}
-                        endValue={2100}
+                    // startValue={2020}
+                    // endValue={2100}
                     />
                 </div>
             </div>

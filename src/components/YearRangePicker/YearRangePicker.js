@@ -21,7 +21,7 @@ class YearRangerPicker extends Component {
     componentDidMount = () => {
         const {
             startValue = new Date().getFullYear(),
-            endValue = new Date().getFullYear() + 64,
+            endValue = new Date().getFullYear() + 63,
         } = this.props;
 
         document.addEventListener('click', this.handleClick);
