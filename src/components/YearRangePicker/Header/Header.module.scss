@@ -1,14 +1,10 @@
-@import "../../styles/variables.scss";
+@import "../../../styles/variables.scss";
 
 .header {
     display: flex;
 }
 
-.selected-range {
-    font-size: 14px;
-}
-
-.range-arrow {
+.rangeArrow {
     border-radius: 10px;
     padding: 0 4px;
     margin: 0 2px;

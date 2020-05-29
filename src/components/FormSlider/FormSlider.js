@@ -1,9 +1,9 @@
 import React, { Fragment, useState } from "react";
 import PropTypes from 'prop-types';
 
-import Slider from "../Slider/Slider";
-import Bubble from "../Bubble/Bubble";
-import Label from "../Label/Label"
+import Slider from "./Slider/Slider";
+import Bubble from "./Bubble/Bubble";
+import Label from "./Label/Label"
 
 
 import styles from './FormSlider.module.scss'

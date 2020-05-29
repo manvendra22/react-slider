@@ -1,6 +1,5 @@
 import React from 'react'
-import { FaChevronLeft, FaChevronRight, FaCalendarAlt } from 'react-icons/fa';
-
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 import styles from './Header.module.scss'
 
@@ -10,7 +9,7 @@ export default function Header(props) {
     return (
         <div className={styles.header}>
             <div
-                className={`range-arrow ${disableLeft && 'disabled'}`}
+                className={`${styles.rangeArrow} ${disableLeft && 'disabled'}`}
                 onClick={handleLeftClick}
             >
                 <FaChevronLeft />
@@ -19,7 +18,7 @@ export default function Header(props) {
                 {`${startValue} - ${startValue + 15}`}
             </div>
             <div
-                className={`range-arrow ${disableRight && 'disabled'}`}
+                className={`${styles.rangeArrow} ${disableRight && 'disabled'}`}
                 onClick={handleRightClick}
             >
                 <FaChevronRight />

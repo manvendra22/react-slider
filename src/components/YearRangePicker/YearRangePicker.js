@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { FaChevronLeft, FaChevronRight, FaCalendarAlt } from 'react-icons/fa';
+import { FaCalendarAlt } from 'react-icons/fa';
 
 import './_yearRangePicker.scss'
 
-import Body from './Body'
-import Header from './Header'
+import Body from './Body/Body'
+import Header from './Header/Header'
 
 class YearRangerPicker extends Component {
     state = {
