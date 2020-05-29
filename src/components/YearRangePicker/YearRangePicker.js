@@ -13,23 +13,16 @@ class YearRangerPicker extends Component {
         selectedRightValue: '',
         initalLeftValue: '',
         initialRightValue: '',
-        endValue: '',
-        // disableStartLeft: false,
-        // disableStartRight: false,
-        // disableEndLeft: false,
-        // disableEndRight: false,
     };
 
     componentDidMount = () => {
         const {
             startValue = new Date().getFullYear(),
-            endValue = new Date().getFullYear() + 63,
         } = this.props;
 
         document.addEventListener('click', this.handleClick);
 
         this.setState({
-            endValue: Number(endValue),
             initalLeftValue: Number(startValue),
             initialRightValue: Number(startValue) + 1,
             selectedLeftValue: Number(startValue),
@@ -41,19 +34,13 @@ class YearRangerPicker extends Component {
     };
 
     componentDidUpdate = async (prevProps, prevState) => {
-        const { startValue, endValue } = this.props;
+        const { startValue } = this.props;
 
         if (prevProps.startValue !== startValue) {
             this.setState({
                 initalLeftValue: Number(startValue),
                 initialRightValue: Number(startValue) + 1,
                 selectedLeftValue: Number(startValue),
-            });
-        }
-
-        if (prevProps.endValue !== endValue) {
-            this.setState({
-                endValue: Number(endValue),
             });
         }
     };
@@ -111,12 +98,11 @@ class YearRangerPicker extends Component {
             selectedRightValue,
             initalLeftValue,
             initialRightValue,
-            endValue,
-            // disableStartLeft,
-            // disableStartRight,
-            // disableEndLeft,
-            // disableEndRight,
         } = this.state;
+
+        const {
+            endValue
+        } = this.props
 
         return (
             <div className="year-range-picker"
