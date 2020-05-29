@@ -60,35 +60,6 @@
             display: flex;
             border-top: 1px solid #e2e4ec;
             width: 100%;
-
-            .left-body {
-                display: flex;
-                flex-wrap: wrap;
-                width: 50%;
-                border-right: 1px solid #e2e4ec;
-            }
-
-            .right-body {
-                display: flex;
-                flex-wrap: wrap;
-                width: 50%;
-            }
-
-            .year {
-                cursor: pointer;
-                padding: 10px;
-                transition: all 0.3s ease-out;
-
-                &:hover {
-                    color: #fff;
-                    background-color: $gray-600;
-                }
-
-                &.active {
-                    color: #fff;
-                    background-color: $orange-800;
-                }
-            }
         }
     }
 }

@@ -3,19 +3,21 @@ import { FaChevronLeft, FaChevronRight, FaCalendarAlt } from 'react-icons/fa';
 
 import './_yearRangePicker.scss'
 
+import Body from './Body'
+import Header from './Header'
+
 class YearRangerPicker extends Component {
     state = {
         panelOpen: false,
-        selectedStartValue: '',
-        selectedEndValue: '',
-        initialStartValue: '',
-        initialEndValue: '',
-        finalStartValue: '',
-        finalEndValue: '',
-        disableStartLeft: false,
-        disableStartRight: false,
-        disableEndLeft: false,
-        disableEndRight: false,
+        selectedLeftValue: '',
+        selectedRightValue: '',
+        initalLeftValue: '',
+        initialRightValue: '',
+        endValue: '',
+        // disableStartLeft: false,
+        // disableStartRight: false,
+        // disableEndLeft: false,
+        // disableEndRight: false,
     };
 
     componentDidMount = () => {
@@ -27,11 +29,10 @@ class YearRangerPicker extends Component {
         document.addEventListener('click', this.handleClick);
 
         this.setState({
-            finalStartValue: Number(startValue),
-            finalEndValue: Number(endValue),
-            initialStartValue: Number(startValue),
-            initialEndValue: Number(startValue) + 1,
-            selectedStartValue: Number(startValue),
+            endValue: Number(endValue),
+            initalLeftValue: Number(startValue),
+            initialRightValue: Number(startValue) + 1,
+            selectedLeftValue: Number(startValue),
         });
     };
 
@@ -44,16 +45,15 @@ class YearRangerPicker extends Component {
 
         if (prevProps.startValue !== startValue) {
             this.setState({
-                finalStartValue: Number(startValue),
-                initialStartValue: Number(startValue),
-                initialEndValue: Number(startValue) + 1,
-                selectedStartValue: Number(startValue),
+                initalLeftValue: Number(startValue),
+                initialRightValue: Number(startValue) + 1,
+                selectedLeftValue: Number(startValue),
             });
         }
 
         if (prevProps.endValue !== endValue) {
             this.setState({
-                finalEndValue: Number(endValue),
+                endValue: Number(endValue),
             });
         }
     };
@@ -72,28 +72,21 @@ class YearRangerPicker extends Component {
         });
     };
 
-    handleStartYear = selectedStartValue => {
+    handleStartYear = selectedLeftValue => {
         this.setState({
-            selectedStartValue,
-            initialEndValue: selectedStartValue + 1,
+            selectedLeftValue,
+            initialRightValue: selectedLeftValue + 1,
         });
-        this.props.onStartChange(selectedStartValue);
+        // this.props.onStartChange(selectedLeftValue);
     };
 
-    handleEndYear = selectedEndValue => {
+    handleEndYear = selectedRightValue => {
         this.setState({
-            selectedEndValue,
+            selectedRightValue,
         });
-        this.props.onEndChange(selectedEndValue);
+        // this.props.onEndChange(selectedRightValue);
     };
 
-    initializeArray = initialValue => {
-        const { finalStartValue, finalEndValue } = this.state;
-
-        const years = Array.from({ length: 16 }, (value, index) => index + initialValue);
-
-        return years.filter(year => year >= finalStartValue && year <= finalEndValue);
-    };
 
     handleLeftClick = label => {
         this.setState(prevState => {
@@ -114,14 +107,15 @@ class YearRangerPicker extends Component {
     render() {
         const {
             panelOpen,
-            selectedStartValue,
-            selectedEndValue,
-            initialStartValue,
-            initialEndValue,
-            disableStartLeft,
-            disableStartRight,
-            disableEndLeft,
-            disableEndRight,
+            selectedLeftValue,
+            selectedRightValue,
+            initalLeftValue,
+            initialRightValue,
+            endValue,
+            // disableStartLeft,
+            // disableStartRight,
+            // disableEndLeft,
+            // disableEndRight,
         } = this.state;
 
         return (
@@ -134,63 +128,23 @@ class YearRangerPicker extends Component {
                     style={{ display: panelOpen ? 'inline-block' : 'none' }}
                 >
                     <div className="panel-header">
-                        <div className="left-header">
-                            <div
-                                className={`range-arrow ${disableStartLeft && 'disabled'}`}
-                                onClick={() => this.handleLeftClick('initialStartValue')}
-                            >
-                                <FaChevronLeft />
-                            </div>
-                            <div>
-                                {`${initialStartValue} - ${initialStartValue + 15}`}
-                            </div>
-                            <div
-                                className={`range-arrow ${disableStartRight && 'disabled'}`}
-                                onClick={() => this.handleRightClick('initialStartValue')}
-                            >
-                                <FaChevronRight />
-                            </div>
-                        </div>
+                        <Header
+                            startValue={initalLeftValue}
+                            handleLeftClick={() => this.handleLeftClick('initalLeftValue')}
+                            handleRightClick={() => this.handleRightClick('initalLeftValue')}
+                        />
                         <div className="selected-range">
-                            {selectedStartValue} - {selectedEndValue}
+                            {selectedLeftValue} - {selectedRightValue}
                         </div>
-                        <div className="right-header">
-                            <div
-                                className={`range-arrow ${disableEndLeft && 'disabled'}`}
-                                onClick={() => this.handleLeftClick('initialEndValue')}
-                            >
-                                <FaChevronLeft />
-                            </div>
-                            <div>
-                                {`${initialEndValue} - ${initialEndValue + 15}`}
-                            </div>
-                            <div
-                                className={`range-arrow ${disableEndRight && 'disabled'}`}
-                                onClick={() => this.handleRightClick('initialEndValue')}
-                            >
-                                <FaChevronRight />
-                            </div>
-                        </div>
+                        <Header
+                            startValue={initialRightValue}
+                            handleLeftClick={() => this.handleLeftClick('initialRightValue')}
+                            handleRightClick={() => this.handleLeftClick('initialRightValue')}
+                        />
                     </div>
                     <div className="panel-body">
-                        <div className="left-body">
-                            {this.initializeArray(initialStartValue).map(year => (
-                                <div onClick={() => this.handleStartYear(year)}
-                                    className={`year ${year === selectedStartValue && 'active'}`}
-                                >
-                                    {year}
-                                </div>
-                            ))}
-                        </div>
-                        <div className="right-body">
-                            {this.initializeArray(initialEndValue).map(year => (
-                                <div onClick={() => this.handleEndYear(year)}
-                                    className={`year ${year === selectedEndValue && 'active'}`}
-                                >
-                                    {year}
-                                </div>
-                            ))}
-                        </div>
+                        <Body startValue={initalLeftValue} endValue={endValue} handleValue={this.handleStartYear} />
+                        <Body startValue={initialRightValue} endValue={endValue} handleValue={this.handleEndYear} />
                     </div>
                 </div>
             </div>
