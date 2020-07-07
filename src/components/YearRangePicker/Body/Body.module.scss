@@ -4,7 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     width: 50%;
-    border-right: 1px solid #e2e4ec;
+    border-right: 1px solid $stroke;
 }
 
 .year {
@@ -13,12 +13,12 @@
     transition: all 0.3s ease-out;
 
     &:hover {
-        color: #fff;
-        background-color: $gray-600;
+        color: $tertiary-text;
+        background-color: $tertiary-bg;
     }
 
     &.active {
-        color: #fff;
-        background-color: $orange-800;
+        color: $tertiary-text;
+        background-color: $tertiary-bg;
     }
 }

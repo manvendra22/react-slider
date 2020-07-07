@@ -3,7 +3,7 @@
 .year-range-picker {
     position: relative;
     font-size: 12px;
-    color: $gray-600;
+    color: $element-text;
 
     .year-range-select {
         display: flex;
@@ -16,10 +16,11 @@
 
     .year-range-panel-wraper {
         position: absolute;
-        width: 376px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        width: 380px;
+        border: 2px solid $stroke;
         border-radius: 4px;
-        background-color: white;
+        background-color: $element-bg;
+        color: $element-text;
         transition: all 0.3s;
         z-index: 2;
         top: 30px;
@@ -29,7 +30,7 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
-            color: $orange-800;
+            color: $highlight;
             padding: 12px 0;
 
             .selected-range {
@@ -39,7 +40,7 @@
 
         .panel-body {
             display: flex;
-            border-top: 1px solid #e2e4ec;
+            border-top: 1px solid $stroke;
             width: 100%;
         }
     }
