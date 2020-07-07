@@ -13,12 +13,12 @@
     transition: all 0.3s ease-out;
 
     &:hover {
-        color: $tertiary-text;
-        background-color: $tertiary-bg;
+        color: $highlight-text-2;
+        background-color: $highlight-bg-2;
     }
 
     &.active {
-        color: $tertiary-text;
-        background-color: $tertiary-bg;
+        color: $highlight-text;
+        background-color: $highlight-bg;
     }
 }
