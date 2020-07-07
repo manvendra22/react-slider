@@ -30,7 +30,8 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
-            color: $highlight;
+            background: $tertiary-bg;
+            color: $tertiary-text;
             padding: 12px 0;
 
             .selected-range {
