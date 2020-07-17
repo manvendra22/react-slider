@@ -20,7 +20,7 @@ export default function Body(props) {
     return (
         <div className={styles.panel}>
             {initializeArray().map(year => (
-                <div onClick={() => handleClick(year)}
+                <div key={year} onClick={() => handleClick(year)}
                     className={`${styles.year} ${year === selected && styles.active}`}
                 >
                     {year}
