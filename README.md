@@ -10,7 +10,7 @@ https://react-kit.netlify.app/
 #### Storybook
 https://react-kit-story.netlify.app/
 
-![Screenshot](react_ui_kit.png)
+![Screenshot](https://res.cloudinary.com/dracarys/image/upload/v1595049189/react_ui.png)
 
 ### Tech stack:
 
