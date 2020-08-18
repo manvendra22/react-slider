@@ -13,40 +13,39 @@ export default function App() {
     }
 
     return (
-        <div className="container">
-            <div className="header">
-                React UI components
-                <a target="_blank" href="https://github.com/manvendra22/react-ui-kit" className="git-link">
-                    <img src={gitIcon} alt="github-logo" className="icon-git" />
-                </a>
-            </div>
-            <div className="box">
-                <div className="title">React-Slider</div>
-                <div className="content">
-                    <FormSlider
-                        initialValue={50}
-                        onChange={handleChange}
-                        min={0}
-                        max={100}
-                        step={1}
-                        name=''
-                        className=''
-                        disabled={false}
-                        showLables={true}
-                        showBubble={true}
-                        showBubbleOnlyOnScroll={true}
-                    />
+        <>
+            <a target="_blank" href="https://github.com/manvendra22/react-ui-kit" className="git-link">
+                <img src={gitIcon} alt="github-logo" className="icon-git" />
+            </a>
+            <div className="container">
+                <div className="box">
+                    <div className="title">React-Slider</div>
+                    <div className="content">
+                        <FormSlider
+                            initialValue={50}
+                            onChange={handleChange}
+                            min={0}
+                            max={100}
+                            step={1}
+                            name=''
+                            className=''
+                            disabled={false}
+                            showLables={true}
+                            showBubble={true}
+                            showBubbleOnlyOnScroll={true}
+                        />
+                    </div>
+                </div>
+                <div className="box">
+                    <div className="title">React-Year-Range-Picker</div>
+                    <div className="content">
+                        <YearRangePicker
+                        // startValue={2020}
+                        // endValue={2100}
+                        />
+                    </div>
                 </div>
             </div>
-            <div className="box">
-                <div className="title">React-Year-Range-Picker</div>
-                <div className="content">
-                    <YearRangePicker
-                    // startValue={2020}
-                    // endValue={2100}
-                    />
-                </div>
-            </div>
-        </div>
+        </>
     );
 }

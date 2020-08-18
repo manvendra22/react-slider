@@ -3,14 +3,14 @@
 // Reset
 
 html {
-    box-sizing: border-box;
-    font-size: 16px;
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body,
@@ -23,68 +23,78 @@ h6,
 p,
 ol,
 ul {
-    margin: 0;
-    padding: 0;
-    font-weight: normal;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
 }
 
 ol,
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 body {
-    box-sizing: border-box;
-    font-family: sans-serif;
-    font-size: 16px;
-    background: $primary-bg;
-    color: $primary-text;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 16px;
+  background: $primary-bg;
+  color: $primary-text;
 }
 
-// .container {}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .header {
-    background: $tertiary-bg;
-    color: $tertiary-text;
-    font-size: 20px;
-    padding: 25px;
-    display: flex;
-    align-items: center;
+  background: $tertiary-bg;
+  color: $tertiary-text;
+  font-size: 20px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
 }
 
 .box {
-    width: 50%;
-    padding: 50px;
-    margin: 100px auto;
-    background: $secondary-bg;
-    color: $secondary-text;
-    border-radius: 10px;
-    box-shadow: 0 50px 80px rgba(0, 0, 0, 0.07);
+  width: 50%;
+  padding: 50px;
+  margin-top: 100px;
+  background: $secondary-bg;
+  color: $secondary-text;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 5px 10px;
+  transition: box-shadow 0.2s ease 0s;
+}
+
+.box:hover {
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 30px 60px;
 }
 
 // .title {}
 
 .content {
-    margin: 20px 0px;
-    display: flex;
-    justify-content: center;
+  margin: 20px 0px;
+  display: flex;
+  justify-content: center;
 }
 
 .git-link {
-    position: absolute;
-    right: 25px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
 }
 
 .icon-git {
-    width: 60px;
-    transition: all .3s ease-in-out;
+  width: 60px;
+  transition: all 0.3s ease-in-out;
 }
 
 .icon-git:hover {
-    transform: rotate(360deg) scale(1.2);
+  transform: rotate(360deg) scale(1.2);
 }
