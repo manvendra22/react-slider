@@ -1,6 +1,6 @@
 # react-ui-kit
 
-> React UI Kit is a web app I started to learn about building production ready, reusable HTML native components in React. It uses a custom webpack config and scss.
+> A wip collection of production-ready, reusable HTML native components in React. It uses a custom webpack config and SCSS.
 
 ## Live links
 
